@@ -50,6 +50,7 @@ const Footer = () => {
                                 <p> Detail-oriented</p>
                                 <p> Multitasking</p>
                                 <p> Self-motivated</p>
+                                <p> Self-motivated</p>
                             </div>
                         </div>
 
