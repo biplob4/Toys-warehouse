@@ -1,0 +1,77 @@
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://img.freepik.com/free-photo/child-having-fun-during-playtime_23-2149382748.jpg?t=st=1651318372~exp=1651318972~hmac=2126282325750afc794688e3f0b482bd8f23a2b3e7d8bc1f446c3c6565e49bb6&w=996");
+    background-size: cover;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.first {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+}
+.first h5{
+   color: #fff;
+   margin: 20px 0;
+}
+
+.first h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #fff;
+    padding-bottom: 0.5em;
+}
+
+.first h4::after {
+    content: '';
+    background: tomato;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
+
+.first p {
+    font-size: 14px;
+}
+
+.second2 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.link:hover{
+    color: tomato;
+    cursor: pointer;
+}
+.link{
+   font-size: 16px;
+}
+
+@media screen and (max-width:1000px) {
+    .first {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .first h4::after {
+        left: 40%;
+    }
+}
+
+.line {
+    height: 2px;
+    background-color: rgb(206, 206, 206);
+    width: 100%;
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+}

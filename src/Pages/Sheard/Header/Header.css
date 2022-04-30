@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500&family=Lora:wght@400;500;600&family=Merriweather:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:wght@400;500;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+
+.navber{
+    /* background-color: #F1DDDC ; */
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Heebo', sans-serif; */
+}
+.nav-brand{
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 40px;
+}
+.nav-brand strong{
+    color: #38CC77 ;
+    font-weight: 600;
+    font-style: italic;
+}
+.nav-item{
+    /* font-size: 15px; */
+    position: relative;
+    transition: 0.5s;
+}
+.offer-masage{
+    background: tomato;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 160px;
+    position: absolute;
+    top:-15px;
+    width: 110px;
+    text-align: center; 
+}
+#login-btn{
+    margin: 0;
+    border: none;
+    padding: auto;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+}
