@@ -60,15 +60,15 @@ const Footer = () => {
                                 <div> <p className="copyright">Toys warehouse &#169; {todayDate}</p></div>
                                 <div className="socialbtns">
                                     <p>Fllow Us</p>
-                                    <a href="https://mail.google.com/mail/u/0/#inbox" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#DD4B39' icon={faGoogle} size='xxl'></FontAwesomeIcon></a>
+                                    <a href="https://mail.google.com/mail/u/0/#inbox" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#DD4B39' icon={faGoogle} size='xl'></FontAwesomeIcon></a>
 
-                                    <a href="https://www.facebook.com/mdbiplob.hossen.3323/" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#1877F2' icon={faFacebook} size='xxl'></FontAwesomeIcon></a>
+                                    <a href="https://www.facebook.com/mdbiplob.hossen.3323/" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#1877F2' icon={faFacebook} size='xl'></FontAwesomeIcon></a>
 
-                                    <a href="https://www.instagram.com/mdbiplob462/" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#784CAC' icon={faInstagram} size='xxl'></FontAwesomeIcon></a>
+                                    <a href="https://www.instagram.com/mdbiplob462/" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#784CAC' icon={faInstagram} size='xl'></FontAwesomeIcon></a>
 
-                                    <a href="https://github.com/biplob4" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#009AD5' icon={faGithub} size='xxl'></FontAwesomeIcon></a>
+                                    <a href="https://github.com/biplob4" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#009AD5' icon={faGithub} size='xl'></FontAwesomeIcon></a>
 
-                                    <a href="http://www.google.com" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#E4405F' icon={faYoutube} size='xxl'></FontAwesomeIcon></a>
+                                    <a href="http://www.google.com" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon className='iconSocial' color='#E4405F' icon={faYoutube} size='xl'></FontAwesomeIcon></a>
 
                                 </div>
                             </div>

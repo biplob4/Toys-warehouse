@@ -17,6 +17,7 @@ const Header = () => {
                         <Nav className="mx-auto">
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/home"> <FontAwesomeIcon className='me-1 text-secondary' icon={faHome} />Home</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/blogs">Blogs</CustomLink>
+                            <CustomLink className="nav-item nav-link mx-3 my-1" to="/inventory">Inventory</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/addItem">Add Item<span className='offer-masage'>20% off for you</span></CustomLink>
                         </Nav>
                         

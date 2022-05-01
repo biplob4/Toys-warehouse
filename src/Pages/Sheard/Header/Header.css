@@ -28,7 +28,8 @@
     padding: 3px 7px;
     border-radius: 160px;
     position: absolute;
-    top:-15px;
+    left: 30%;
+    top:-23px;
     width: 110px;
     text-align: center; 
 }

@@ -7,6 +7,7 @@ import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import MyItem from './Pages/MyItem/MyItem';
 import ForOFor from './Pages/Sheard/ForOFor/ForOFor';
 import Header from './Pages/Sheard/Header/Header';
+import Inventory from './Pages/Inventory/Inventory/Inventory';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='signin' element={<SignIn/>}></Route>
         <Route path='login' element={<Login/>}></Route>
         <Route path='manageInventory' element={<ManageInventory/>}></Route>
+        <Route path='inventory' element={<Inventory/>}></Route>
         <Route path='myItem' element={<MyItem/>}></Route>
         <Route path='*' element={<ForOFor/>}></Route>
       </Routes>
