@@ -17,12 +17,11 @@ const Header = () => {
                         <Nav className="mx-auto">
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/home"> <FontAwesomeIcon className='me-1 text-secondary' icon={faHome} />Home</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/blogs">Blogs</CustomLink>
-                            <CustomLink className="nav-item nav-link mx-3 my-1" to="/inventory">Inventory</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/addItem">Add Item<span className='offer-masage'>20% off for you</span></CustomLink>
                         </Nav>
                         
                         <Nav className="ms-auto">
-                        <CustomLink className="nav-item nav-link mx-3 my-2 " to="/manageItem">Manage Item</CustomLink>
+                        <CustomLink className="nav-item nav-link mx-3 my-2 " to="/manageInventorys">Manage Inventory</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/myItem">My Item</CustomLink>
                             <customLink className="nav-item n" to="/login"><Button style={{margin:"0"}} id='login-btn'>Login /SignIn</Button></customLink>
                         </Nav>
