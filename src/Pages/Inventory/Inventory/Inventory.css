@@ -1,0 +1,66 @@
+.quantity-container{
+    background: rgba(236, 232, 232, 0.459);
+}
+.check-out{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0 20px;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+}
+.checkOut-from{
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    border-radius: 5px;
+}
+.checkOut-from input{
+    display: block;
+    padding: 15px 25px;
+    font-size: 20px;
+    width: 95%;
+    background: rgba(236, 232, 232, 0.253);
+    border: 1px solid #0D6EFD;
+    outline: none;
+    margin-top:40%;
+    font-weight: 400;
+    color: rgb(144, 143, 143);
+}
+.checkOut-from input:first-child{
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+}
+.checkOut-from input:last-child{
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.from-btn {
+    background: tomato;
+    color: #fff !important;
+    width: 75% !important;
+}
+.from-style{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+@media screen and (max-width:1000px) {
+    .checkOut-from{
+        width: 100%;
+       padding: 0 15px;
+       margin-top: 50px;
+    }
+    .checkOut-from input{
+        width: 100%;
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+    .check-out{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 0 10px;
+    }
+}
