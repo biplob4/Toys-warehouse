@@ -23,7 +23,7 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/manageInventorys">Manage Inventory</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/myItem">My Item</CustomLink>
-                            <customLink className="nav-item ms-3" to="/login"><Button style={{ margin: "0" }} id='login-btn'>Login /SignIn</Button></customLink>
+                            <CustomLink className="nav-item ms-3" to="/login"><Button style={{ margin: "0" }} id='login-btn'>Login /SignIn</Button></CustomLink>
                         </Nav>
 
                     </Navbar.Collapse>

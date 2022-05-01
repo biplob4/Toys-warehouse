@@ -1,5 +1,5 @@
 .singeleProduct-delete-btn{
-    background: transparent;
+    background:  lavender;
     border: none;
     color: gray;
     padding: 8px 20px;
@@ -8,7 +8,7 @@
     border: 0.5px solid lavender;
 }
 .singeleProduct-delete-btn:hover{
-    background: lavender;
+    background: transparent;
     color: gray;
     border: 0.5px solid lavender;
 }

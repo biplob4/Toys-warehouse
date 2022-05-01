@@ -18,7 +18,7 @@ const Toys = () => {
             <div className="products container">
                 {
                     toys.map(toy => (
-                        <div className='singeleProduct'>
+                        <div key={toy._id} className='singeleProduct'>
                             <h4 className="text-primary text-center py-2">{toy.name}</h4>
                             <p>{toy.description}</p>
                             <div className="singeleProductImg"><img src={toy.image} alt="img" /></div>
