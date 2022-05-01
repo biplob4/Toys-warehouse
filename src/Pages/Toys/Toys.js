@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import './Toys.css';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Toys = () => {
     const [toys, setToys] = useState([]);
@@ -27,7 +28,7 @@ const Toys = () => {
                             </div>
                             <hr />
                             <p>Supplier Name: {toy.supplierName}</p>
-                            <button className='singeleProduct-btn'> Update <FontAwesomeIcon icon={faArrowRightLong}></FontAwesomeIcon></button>
+                            <Link to={`/inventory/${toy._id}`}><button className='singeleProduct-btn'> Update <FontAwesomeIcon icon={faArrowRightLong}></FontAwesomeIcon></button></Link>
                         </div>
                     ))
                 }
