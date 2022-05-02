@@ -5,12 +5,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faEnvelope, faKey, faSignIn } from '@fortawesome/free-solid-svg-icons';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import Loadding from '../../Sheard/Loadding/Loadding';
 
 
 const SignIn = () => {
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    let badError ;
+
+    if(user){
+        navigate (from, { replace: true });
+        toast('successfully Sign in');
+    }
+    if(loading||updating){
+       return (
+           <Loadding/>
+       )
+    }
+    if (error||updateError) {
+        badError = <p className='text-center text-danger m-1'>Error: {error.message}</p>
+      }
 
     const handleRegister = async event => {
         event.preventDefault();
@@ -30,11 +49,12 @@ const SignIn = () => {
                 <div className="">
                     <input name='email' placeholder='Email' required /><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></div>
                 <div className="">
-                    <input name='password' placeholder='Password' required /><FontAwesomeIcon icon={faKey}></FontAwesomeIcon></div>
+                    <input name='password' type='password' placeholder='Password' required /><FontAwesomeIcon icon={faKey}></FontAwesomeIcon></div>
                 <div className="">
                     <input className='login-from-btn rounded' type="submit" value='SignIn' /><FontAwesomeIcon style={{left:"40%"}} icon={faSignIn} color='#fff'></FontAwesomeIcon>
                 </div>
-                <div className="d-flex text-danger">
+                {badError}
+                <div className="d-flex text-secondary">
                     <p style={{cursor:'pointer',fontWeight:"500"}} className='mb-0 mt-3  px-1 text-secondary'>If You Alraddy Have An Acccount :</p>
                     <Link className='ms-auto px-2' to='/login'><p style={{cursor:'pointer',fontWeight:"500"}} className='mb-0 mt-3'>LOGIN</p></Link>
                 </div>

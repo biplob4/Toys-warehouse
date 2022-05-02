@@ -5,8 +5,13 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import CustomLink from '../../../CustomLink';
 import Logo from '../../../icon/icon1.jpg';
 import './Header.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init/Firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+
     return (
         <div>
             <Navbar className='navber py-0 shadow-sm' collapseOnSelect expand="lg">
@@ -24,7 +29,10 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/manageInventorys">Manage Inventory</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/myItem">My Item</CustomLink>
-                            <CustomLink className="nav-item ms-3" to="/login"><Button style={{ margin: "0" }} id='login-btn'>Login /SignIn</Button></CustomLink>
+                            {
+                              !user ? <CustomLink className="nav-item ms-3" to="/login"><Button style={{ margin: "0" }} id='login-btn'>Login /SignIn</Button></CustomLink> :
+                                <p onClick={()=>signOut(auth)} className="nav-item ms-3"><Button style={{ margin: "0" }} id='login-btn'>Log Out</Button></p>
+                            }
                         </Nav>
 
                     </Navbar.Collapse>

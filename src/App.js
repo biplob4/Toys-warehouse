@@ -11,25 +11,28 @@ import Inventory from './Pages/Inventory/Inventory/Inventory';
 import AddItem from './Pages/AddItem/AddItem';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import RequireAuth from './Pages/Sheard/RequireAuth/RequireAuth';
 
 
 function App() {
   return (
     <div>
-      <Header/>
+      <Header />
       <Routes>
-      <Route path='/' element={<Home/>}></Route>
-        <Route path='/home' element={<Home/>}></Route>
-        <Route path='signin' element={<SignIn/>}></Route>
-        <Route path='login' element={<Login/>}></Route>
-        <Route path='manageInventorys' element={<Inventorys/>}></Route>
-        <Route path='/inventory/:id' element={<Inventory/>}></Route>
-        <Route path='myItem' element={<MyItem/>}></Route>
-        <Route path='addItem' element={<AddItem/>}></Route>
-        <Route path='*' element={<ForOFor/>}></Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='signin' element={<SignIn />}></Route>
+        <Route path='login' element={<Login />}></Route>
+        <Route path='manageInventorys' element={<Inventorys />}></Route>
+        <Route path='/inventory/:id' element={<Inventory />}></Route>
+        <Route path='myItem' element={<MyItem />}></Route>
+        <Route path='addItem' element={
+          <RequireAuth><AddItem /></RequireAuth>
+        }></Route>
+        <Route path='*' element={<ForOFor />}></Route>
       </Routes>
-      <Footer/>
-      <ToastContainer/>
+      <Footer />
+      <ToastContainer />
     </div>
   );
 }

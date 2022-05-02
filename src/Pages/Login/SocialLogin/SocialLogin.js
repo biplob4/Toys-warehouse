@@ -4,10 +4,18 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../Sheard/firebase.init/Firebase.init';
+import Loadding from '../../Sheard/Loadding/Loadding';
 import './SocialLogin.css';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    if(loading){
+        return(
+            <Loadding/>
+        )
+    }
+
     return (
         <div>
             <div className="d-flex alignItem-center justify-content-center my-2">
