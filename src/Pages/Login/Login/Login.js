@@ -51,7 +51,7 @@ const Login = () => {
                 </div>
                 {badError}
                 <div className="d-flex text-secondary">
-                    <p style={{ cursor: 'pointer', fontWeight: "500" }} className='mb-0 mt-3  px-1'>Forget Password</p>
+                    <p style={{ cursor: 'pointer', fontWeight: "500",textDecoration: 'underline' }} className='mb-0 mt-3  px-1'>Forget Password</p>
                     <Link className='ms-auto px-2' to='/signIn'><p style={{ cursor: 'pointer', fontWeight: "500" }} className='mb-0 mt-3'>SignIn</p></Link>
                 </div>
                 <SocialLogin></SocialLogin>

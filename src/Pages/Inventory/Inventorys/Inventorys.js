@@ -8,13 +8,13 @@ import './Inventorys.css';
 const Inventorys = () => {
     const [toys, setToys] = useState([]);
     useEffect(() => {
-        fetch('https://morning-headland-26668.herokuapp.com/toys')
+        fetch('https://toys-server-headland-26668.herokuapp.com/toys')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
 
     const handelDelete = id => {
-        const url = `https://morning-headland-26668.herokuapp.com/toys/${id}`;
+        const url = `https://toys-server-headland-26668.herokuapp.com/toys/${id}`;
         const agrre = window.confirm('are you sure');
         if (agrre) {
             fetch(url, {
@@ -27,6 +27,13 @@ const Inventorys = () => {
                 })
         }
     }
+
+    const hendelAdd = data => {
+        const g = { biplob: "name" };
+        const l = { ...data, g }
+        console.log(l);
+    }
+
     return (
         <div className='productContainer'>
             <h1 className='text-center text-secondary'>Manage All Item</h1>
@@ -45,7 +52,7 @@ const Inventorys = () => {
                             <hr />
                             <p>Supplier Name: {toy.supplierName}</p>
                             <button onClick={() => handelDelete(toy._id)} className='singeleProduct-delete-btn singeleProduct-btn text-danger me-4'>  <FontAwesomeIcon className='me-1' icon={faTrash} size='lg' color='gray'></FontAwesomeIcon>Delete</button>
-                            <button className='singeleProduct-delete-btn singeleProduct-btn text-primary'>  <FontAwesomeIcon className='me-1' icon={faAdd} size='lg' color='gray'></FontAwesomeIcon>Add</button>
+                            <button onClick={() => hendelAdd(toy)} className='singeleProduct-delete-btn singeleProduct-btn text-primary'>  <FontAwesomeIcon className='me-1' icon={faAdd} size='lg' color='gray'></FontAwesomeIcon>Add</button>
                         </div>
                     ))
                 }

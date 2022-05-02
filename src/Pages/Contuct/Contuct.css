@@ -1,0 +1,70 @@
+#contuct{
+    width: 70%;
+    margin: 50px auto;
+    padding: 0px 10%;
+    padding-bottom: 30px;
+    margin-top: 200px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#contuct form{
+    width: 100%;
+    margin: auto;
+    padding: 10px 15px;
+}
+#contuct form svg{
+    position: absolute;
+    margin-top: 13px;
+}
+#contuct input, textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 9px 15px;
+    border: none;
+    border-bottom: 1px solid tan;
+    background: rgba(240, 240, 241, 0.568);
+    outline: none;
+    position: relative;
+    padding-left: 33px;
+}
+#contuct textarea{
+    border: 1px solid rgb(151, 150, 150);
+    padding-bottom: 70px;
+    background: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+}
+#contuct form label{
+    display: block;
+    color: rgb(66, 66, 66);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+#contuct form input:nth-child(4){
+    margin-bottom: 30px;
+}
+#contuct h1{
+   text-align: center;
+   font-size: 25px;
+   color: green;
+   font-weight: 400;
+}
+.group-input{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width:900px) {
+    #contuct{
+        width: 95%;
+        margin: 50px auto;
+        padding: 0px 20px;
+    }
+    .group-input{
+        display:block;
+    }
+}

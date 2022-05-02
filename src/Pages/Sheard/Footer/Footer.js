@@ -37,10 +37,10 @@ const Footer = () => {
                         <div className="col-md-4 col-xs-12">
                             <div className="first text-start">
                                 <h4 className='text-center'>Contuct</h4>
-                                <p> <FontAwesomeIcon icon={faPhone} color='#09AEEC' size='lg'></FontAwesomeIcon> Phone : 0 1 7 5 4 - 1 0 2 7 2 6</p>
-                                <p> <FontAwesomeIcon icon={faEnvelopeCircleCheck} color='green' size="lg"></FontAwesomeIcon> Email : biplobhossen6020@gmail.com</p>
-                                <p> <FontAwesomeIcon icon={faFacebook} size="lg" color='#528BFF' /> Facebook : https://www.facebook.com/mdbiplob.hossen.3323/</p>
-                                <p> <FontAwesomeIcon icon={faInstagram} size="lg" color='#5F6D9E' /> Instragrme : https://www.instagram.com/mdbiplob462/</p>
+                                <p> <FontAwesomeIcon icon={faPhone} color='#09AEEC' size='lg' className='me-2'></FontAwesomeIcon> Phone : 0 1 7 5 4 - 1 0 2 7 2 6</p>
+                                <p> <FontAwesomeIcon icon={faEnvelopeCircleCheck} color='green' size="lg" className='me-2'></FontAwesomeIcon> Email : biplobhossen6020@gmail.com</p>
+                                <p> <FontAwesomeIcon icon={faFacebook} size="lg" className='me-2' color='#528BFF' /> Facebook : https://www.facebook.com/mdbiplob.hossen.3323/</p>
+                                <p> <FontAwesomeIcon icon={faInstagram} size="lg" className='me-2' color='#5F6D9E' /> Instragrme : https://www.instagram.com/mdbiplob462/</p>
                             </div>
                         </div>
 

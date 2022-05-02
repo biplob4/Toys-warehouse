@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faSignOut } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import CustomLink from '../../../CustomLink';
@@ -30,8 +30,8 @@ const Header = () => {
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/manageInventorys">Manage Inventory</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/myItem">My Item</CustomLink>
                             {
-                              !user ? <CustomLink className="nav-item ms-3" to="/login"><Button style={{ margin: "0" }} id='login-btn'>Login /SignIn</Button></CustomLink> :
-                                <p onClick={()=>signOut(auth)} className="nav-item ms-3"><Button style={{ margin: "0" }} id='login-btn'>Log Out</Button></p>
+                              !user ? <CustomLink className="nav-item ms-3" to="/login"><Button style={{ margin: "0" }} id='login-btn'> Login /SignIn</Button></CustomLink> :
+                                <p onClick={()=>signOut(auth)} className="nav-item ms-3"><Button style={{ margin: "0" }} id='login-btn'><FontAwesomeIcon style={{left:"40%",marginRight:"10px"}} icon={faSignOut} color='#fff'></FontAwesomeIcon>Log Out</Button></p>
                             }
                         </Nav>
 

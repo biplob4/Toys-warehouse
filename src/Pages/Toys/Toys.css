@@ -4,9 +4,9 @@
     gap: 30px;
 }
 .productContainer{
-    background:  #f3eeed88;
+    background:  #fff;
     padding-top: 80px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
     /* background:  #F4C9C2 ;
     background:  #2E3079 ;
     background:  #EB7966 ; */
@@ -30,9 +30,8 @@
 
 .singeleProduct {
     padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(0, 0, 0, 0.178) 0px 4px 12px;
     border-radius: 5px;
-    background: #fff;
 }
 
 .singeleProduct p {

@@ -3,7 +3,7 @@ import './SignIn.css';
 import auth from '../../Sheard/firebase.init/Firebase.init';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { faEnvelope, faKey, faSignIn } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faKey, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -51,7 +51,7 @@ const SignIn = () => {
                 <div className="">
                     <input name='password' type='password' placeholder='Password' required /><FontAwesomeIcon icon={faKey}></FontAwesomeIcon></div>
                 <div className="">
-                    <input className='login-from-btn rounded' type="submit" value='SignIn' /><FontAwesomeIcon style={{left:"40%"}} icon={faSignIn} color='#fff'></FontAwesomeIcon>
+                    <input className='login-from-btn rounded' type="submit" value='SignIn' /><FontAwesomeIcon style={{left:"40%"}} icon={faUserPlus} color='#fff'></FontAwesomeIcon>
                 </div>
                 {badError}
                 <div className="d-flex text-secondary">
