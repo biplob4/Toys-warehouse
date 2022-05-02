@@ -8,13 +8,13 @@ import './Inventorys.css';
 const Inventorys = () => {
     const [toys, setToys] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://morning-headland-26668.herokuapp.com/toys')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
 
     const handelDelete = id => {
-        const url = `http://localhost:5000/toys/${id}`;
+        const url = `https://morning-headland-26668.herokuapp.com/toys/${id}`;
         const agrre = window.confirm('are you sure');
         if (agrre) {
             fetch(url, {
@@ -27,32 +27,32 @@ const Inventorys = () => {
                 })
         }
     }
-return (
-    <div className='productContainer'>
-        <h1 className='text-center text-secondary'>Manage All Item</h1>
-        <hr className='w-50 mx-auto text-primary mb-4' />
-        <div className="products container">
-            {
-                toys.map(toy => (
-                    <div key={toy._id} className='singeleProduct'>
-                        <h4 className="text-primary text-center py-2">{toy.name}</h4>
-                        <p>{toy.description}</p>
-                        <div className="singeleProductImg"><img src={toy.image} alt="img" /></div>
-                        <div className="d-flex">
-                            <h5><span className='text-peimary text-smal'>Price:</span> {toy.price}$</h5>
-                            <h5 className=' ms-auto'><span className='text-peimary text-smal'>Quantity:</span> {toy.quantity}</h5>
+    return (
+        <div className='productContainer'>
+            <h1 className='text-center text-secondary'>Manage All Item</h1>
+            <hr className='w-50 mx-auto text-primary mb-4' />
+            <div className="products container">
+                {
+                    toys.map(toy => (
+                        <div key={toy._id} className='singeleProduct'>
+                            <h4 className="text-primary text-center py-2">{toy.name}</h4>
+                            <p>{toy.description}</p>
+                            <div className="singeleProductImg"><img src={toy.image} alt="img" /></div>
+                            <div className="d-flex">
+                                <h5><span className='text-peimary text-smal'>Price:</span> {toy.price}$</h5>
+                                <h5 className=' ms-auto'><span className='text-peimary text-smal'>Quantity:</span> {toy.quantity}</h5>
+                            </div>
+                            <hr />
+                            <p>Supplier Name: {toy.supplierName}</p>
+                            <button onClick={() => handelDelete(toy._id)} className='singeleProduct-delete-btn singeleProduct-btn text-danger me-4'>  <FontAwesomeIcon className='me-1' icon={faTrash} size='lg' color='gray'></FontAwesomeIcon>Delete</button>
+                            <button className='singeleProduct-delete-btn singeleProduct-btn text-primary'>  <FontAwesomeIcon className='me-1' icon={faAdd} size='lg' color='gray'></FontAwesomeIcon>Add</button>
                         </div>
-                        <hr />
-                        <p>Supplier Name: {toy.supplierName}</p>
-                        <button onClick={() => handelDelete(toy._id)} className='singeleProduct-delete-btn singeleProduct-btn text-danger me-4'>  <FontAwesomeIcon className='me-1' icon={faTrash} size='lg' color='gray'></FontAwesomeIcon>Delete</button>
-                        <button className='singeleProduct-delete-btn singeleProduct-btn text-primary'>  <FontAwesomeIcon className='me-1' icon={faAdd} size='lg' color='gray'></FontAwesomeIcon>Add</button>
-                    </div>
-                ))
-            }
-        </div>
-        <Link to='/addItem'> <Button className='d-block mx-auto btn-xxl mt-4'>Add New Item</Button>  </Link>
-    </div >
-);
+                    ))
+                }
+            </div>
+            <Link to='/addItem'> <Button className='d-block mx-auto btn-xxl mt-4'>Add New Item</Button>  </Link>
+        </div >
+    );
 };
 
 export default Inventorys;

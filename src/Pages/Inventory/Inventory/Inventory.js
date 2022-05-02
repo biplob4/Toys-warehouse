@@ -8,8 +8,8 @@ import './Inventory.css';
 const Inventory = () => {
     const { id } = useParams();
     const [toy, setToy] = useState({});
-    const quantity = {quantity: toy.quantity - 1};
-    const url = `http://localhost:5000/toys/${id}`;
+    const quantity = { quantity: toy.quantity - 1 };
+    const url = `https://morning-headland-26668.herokuapp.com/toys/${id}`;
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
@@ -31,7 +31,7 @@ const Inventory = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toys/${id}`)
+        fetch(`https://morning-headland-26668.herokuapp.com/toys/${id}`)
             .then(res => res.json())
             .then(data => setToy(data));
     }, [])
@@ -44,7 +44,7 @@ const Inventory = () => {
                     <img className='mb-4 rounded w-100' src={toy.image} alt="img" />
                     <div className="d-flex mb-3">
                         <h4 className='text-primary'>{toy.name}</h4>
-                        <Button onClick={()=>onSubmit(quantity)} className='btn-xll ms-auto'>Delivered</Button>
+                        <Button onClick={() => onSubmit(quantity)} className='btn-xll ms-auto'>Delivered</Button>
                     </div>
                     <div className="d-flex">
                         <h6><span className='text-peimary text-smal'>Price:</span> {toy.price}$</h6>

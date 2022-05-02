@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Toys = () => {
     const [toys, setToys] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/toysLimited')
+        fetch('https://morning-headland-26668.herokuapp.com/toysLimited')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])

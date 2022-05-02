@@ -4,10 +4,10 @@ import { toast } from 'react-toastify';
 import './AddItem.css';
 
 const AddItem = () => {
-    const { register, handleSubmit, reset  } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = 'http://localhost:5000/toys';
+        const url = 'https://morning-headland-26668.herokuapp.com/toys';
         fetch(url, {
             method: 'POST',
             headers: {
