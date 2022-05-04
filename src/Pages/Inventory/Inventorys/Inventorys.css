@@ -1,7 +1,7 @@
 .singeleProduct-delete-btn{
     border: none;
     padding: 8px 20px;
-    width: 30%;
+    /* width: 40%; */
     font-size: 14px;
     border: 0.5px solid lavender;
 }
@@ -15,7 +15,6 @@
     .singeleProduct-delete-btn{
         border: none;
         padding: 8px 20px;
-        width: 40%;
         font-size: 14px;
         border: 0.5px solid lavender;
     }

@@ -8,6 +8,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loadding from '../../Sheard/Loadding/Loadding';
+import UseToken from '../../Sheard/UseToken/UseToken';
 
 
 const SignIn = () => {
@@ -17,8 +18,10 @@ const SignIn = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
     let badError ;
+    const [token] = UseToken(user);
 
-    if(user){
+
+    if(token){
         navigate (from, { replace: true });
         toast('successfully Sign in');
     }

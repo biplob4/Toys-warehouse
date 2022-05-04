@@ -3,22 +3,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Sheard/firebase.init/Firebase.init';
 import Loadding from '../../Sheard/Loadding/Loadding';
+import UseToken from '../../Sheard/UseToken/UseToken';
 import './SocialLogin.css';
 
 const SocialLogin = () => {
     const navigate = useNavigate();
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    const [token] = UseToken(user);
 
     if(loading){
         return(
             <Loadding/>
         )
     }
-    if(user){
-        navigate("/home")
+    if(token){
+        navigate (from, { replace: true });
     }
 
     return (

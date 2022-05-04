@@ -10,6 +10,7 @@ import auth from '../../Sheard/firebase.init/Firebase.init';
 import Loadding from '../../Sheard/Loadding/Loadding';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Loign.css';
+import UseToken from '../../Sheard/UseToken/UseToken';
 
 const Login = () => {
     const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
@@ -20,11 +21,12 @@ const Login = () => {
     const [email,setEmail] = useState('');
     let badError;
     let password;
+    const [token] = UseToken(user);
 
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
-        toast('successfully Sign in');
+
     }
     if (loading || sending) {
         return (
@@ -55,7 +57,7 @@ const Login = () => {
                 </div>
                 {badError}
                 <div className="d-flex text-secondary">
-                    <p onClick={async () => { await sendPasswordResetEmail(email); toast('Sent email'); }} style={{ cursor: 'pointer', fontWeight: "500", textDecoration: 'underline' }} className='mb-0 mt-3  px-1'>Forget Password</p>
+                    <p onClick={async () => { await sendPasswordResetEmail(email);if(email){ toast('Sent email')}; }} style={{ cursor: 'pointer', fontWeight: "500", textDecoration: 'underline' }} className='mb-0 mt-3  px-1'>Forget Password</p>
                     <Link className='ms-auto px-2' to='/signIn'><p style={{ cursor: 'pointer', fontWeight: "500" }} className='mb-0 mt-3'>SignIn</p></Link>
                 </div>
                 <SocialLogin></SocialLogin>

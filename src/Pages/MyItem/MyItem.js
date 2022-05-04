@@ -1,23 +1,40 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../Sheard/firebase.init/Firebase.init';
 import Loadding from '../Sheard/Loadding/Loadding';
 import './MyItem.css';
 
 const MyItem = () => {
     const [user, loading] = useAuthState(auth);
-
     const [userProduct, setUserProduct] = useState([]);
+    const nevigate = useNavigate();
+
     useEffect(() => {
         const getUser = async () => {
             const email = user?.email;
             const url = `https://morning-headland-26668.herokuapp.com/user?email=${email}`;
-            const { data } = await axios.get(url);
-            setUserProduct(data);
+
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                });
+                setUserProduct(data);
+            }
+            catch (error) {
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth)
+                    nevigate('/login');
+                }
+            }
+
         }
         getUser();
     }, [loading])
