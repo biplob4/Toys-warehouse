@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Toys = () => {
     const [toys, setToys] = useState([]);
     useEffect(() => {
-        fetch('https://toys-server-headland-26668.herokuapp.com/toysLimited')
+        fetch('https://morning-headland-26668.herokuapp.com/toysLimited')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
@@ -22,13 +22,13 @@ const Toys = () => {
                             <h4 className="text-primary text-center py-2">{toy.name}</h4>
                             <p>{toy.description}</p>
                             <div className="singeleProductImg"><img src={toy.image} alt="img" /></div>
-                            <div className="d-flex">
-                                <h5><span className='text-peimary text-smal'>Price:</span> {toy.price}$</h5>
-                                <h5 className=' ms-auto'><span className='text-peimary text-smal'>Quantity:</span> {toy.quantity}</h5>
+                            <div className="d-flex mt-1">
+                                <h6><span className='text-peimary text-smal'>Price:</span> {toy.price}$</h6>
+                                <h6 className=' ms-auto'><span className='text-peimary text-smal'>Quantity:</span> {toy.quantity}</h6>
                             </div>
-                            <hr />
+                            <hr className='my-2' />
                             <p>Supplier Name: {toy.supplierName}</p>
-                            <Link to={`/inventory/${toy._id}`}><button className='singeleProduct-btn'> Update <FontAwesomeIcon icon={faArrowRightLong}></FontAwesomeIcon></button></Link>
+                            <Link to={`/inventory/${toy._id}`}><button className='singeleProduct-btn w-100'> Update <FontAwesomeIcon icon={faArrowRightLong}></FontAwesomeIcon></button></Link>
                         </div>
                     ))
                 }

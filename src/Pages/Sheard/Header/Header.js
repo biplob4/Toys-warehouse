@@ -8,6 +8,7 @@ import './Header.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init/Firebase.init';
 import { signOut } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -16,7 +17,7 @@ const Header = () => {
         <div>
             <Navbar className='navber py-0 shadow-sm' collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand className='nav-brand' href="#home"><h3><img src={Logo} alt="imaige" /><strong className='ms-0'>T</strong>oys</h3></Navbar.Brand>
+                    <Navbar.Brand className='nav-brand' as={Link} to='/home'><h3><img src={Logo} alt="imaige" /><strong className='ms-0'>T</strong>oys</h3></Navbar.Brand>
                     {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

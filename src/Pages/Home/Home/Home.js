@@ -8,10 +8,10 @@ import './Home.css';
 const Home = () => {
     return (
         <div>
-            <Banner/>
-            <Toys/>
-            <StartSmool/>
-            <Contuct/>
+            <Banner />
+            <Toys />
+            <StartSmool />
+            <Contuct />
         </div>
     );
 };

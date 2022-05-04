@@ -7,7 +7,7 @@ const AddItem = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = 'https://toys-server-headland-26668.herokuapp.com/toys';
+        const url = 'https://morning-headland-26668.herokuapp.com/toys';
         fetch(url, {
             method: 'POST',
             headers: {
@@ -23,8 +23,8 @@ const AddItem = () => {
     };
     return (
         <div className="add py-5">
-            <div className='mx-auto my-5' id='contuct'>
-                <h1 className='pt-4'>Add a new Product</h1>
+            <div className='mx-auto my-5 bg-light' id='contuct'>
+                <h1 className='pt-4 text-primary'>Add a new Product</h1>
                 <form className=' d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='ps-3  mb-3' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
                     <textarea className='ps-2 mb-3' placeholder='Description' {...register("description")} />

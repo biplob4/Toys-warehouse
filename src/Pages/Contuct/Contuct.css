@@ -4,7 +4,8 @@
     padding: 0px 10%;
     padding-bottom: 30px;
     margin-top: 200px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: hsla(0, 0%, 39%, 0.2) 0px 2px 8px 0px;
+    background: rgb(56, 55, 55);
 }
 #contuct form{
     width: 100%;
@@ -14,14 +15,14 @@
 #contuct form svg{
     position: absolute;
     margin-top: 13px;
+    z-index: 2;
 }
 #contuct input, textarea{
     width: 100%;
     margin-bottom: 10px;
     padding: 9px 15px;
     border: none;
-    border-bottom: 1px solid tan;
-    background: rgba(240, 240, 241, 0.568);
+    border-bottom: 1px solid rgb(193 188 182 / 59%);
     outline: none;
     position: relative;
     padding-left: 33px;
@@ -36,7 +37,7 @@
 }
 #contuct form label{
     display: block;
-    color: rgb(66, 66, 66);
+    color: rgb(255, 255, 255);
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 5px;
@@ -48,7 +49,7 @@
 #contuct h1{
    text-align: center;
    font-size: 25px;
-   color: green;
+   color: #fff;
    font-weight: 400;
 }
 .group-input{

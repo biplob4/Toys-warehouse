@@ -1,14 +1,22 @@
 .singeleProduct-delete-btn{
-    background:  lavender;
     border: none;
-    color: gray;
     padding: 8px 20px;
-    width: 45%;
-    font-size: 16px;
+    width: 30%;
+    font-size: 14px;
     border: 0.5px solid lavender;
 }
 .singeleProduct-delete-btn:hover{
     background: transparent;
     color: gray;
     border: 0.5px solid lavender;
+}
+
+@media screen and (max-width:500px) {
+    .singeleProduct-delete-btn{
+        border: none;
+        padding: 8px 20px;
+        width: 40%;
+        font-size: 14px;
+        border: 0.5px solid lavender;
+    }
 }
