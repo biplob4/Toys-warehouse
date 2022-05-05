@@ -11,14 +11,14 @@ import Loadding from '../Sheard/Loadding/Loadding';
 import './MyItem.css';
 
 const MyItem = () => {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [userProduct, setUserProduct] = useState([]);
     const nevigate = useNavigate();
 
     useEffect(() => {
         const getUser = async () => {
             const email = user?.email;
-            const url = `https://morning-headland-26668.herokuapp.com/user?email=${email}`;
+            const url = `http://localhost:5000/user?email=${email}`;
 
             try {
                 const { data } = await axios.get(url, {
@@ -37,7 +37,7 @@ const MyItem = () => {
 
         }
         getUser();
-    }, [loading])
+    }, [user])
 
     const handelDelete = id => {
         const url = `https://morning-headland-26668.herokuapp.com/user/${id}`;
@@ -54,11 +54,7 @@ const MyItem = () => {
         }
     }
 
-    if (loading) {
-        return (
-            <Loadding />
-        )
-    }
+    
 
     return (
         <div className='container my-5 py-5 userProducts'>

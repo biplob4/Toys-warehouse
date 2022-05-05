@@ -24,7 +24,7 @@ const Login = () => {
     const [token] = UseToken(user);
 
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
 
     }
