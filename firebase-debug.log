@@ -1,0 +1,46 @@
+[debug] [2022-05-06T01:43:40.756Z] ----------------------------------------------------------------------
+[debug] [2022-05-06T01:43:40.759Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\BIPLOB\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-05-06T01:43:40.759Z] CLI Version:   10.6.0
+[debug] [2022-05-06T01:43:40.759Z] Platform:      win32
+[debug] [2022-05-06T01:43:40.760Z] Node Version:  v17.9.0
+[debug] [2022-05-06T01:43:40.768Z] Time:          Fri May 06 2022 07:43:40 GMT+0600 (Omsk Standard Time)
+[debug] [2022-05-06T01:43:40.768Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-06T01:43:40.865Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-06T01:43:40.866Z] > authorizing via signed-in user (biplobhossen6020@gmail.com)
+[debug] [2022-05-06T01:43:40.866Z] [iam] checking project toys-warehouse for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-06T01:43:40.869Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/toys-warehouse:testIamPermissions [none]
+[debug] [2022-05-06T01:43:40.870Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/toys-warehouse:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-06T01:43:41.150Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/toys-warehouse:testIamPermissions
+[debug] [2022-05-06T01:43:41.153Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/toys-warehouse [none]
+[debug] [2022-05-06T01:43:41.271Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/toys-warehouse
+[debug] [2022-05-06T01:43:41.670Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/toys-warehouse
+    at RetryOperation._fn (C:\Users\BIPLOB\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:240:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project toys-warehouse. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-05-06T01:47:17.939Z] ----------------------------------------------------------------------
+[debug] [2022-05-06T01:47:17.942Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\BIPLOB\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-06T01:47:17.943Z] CLI Version:   10.6.0
+[debug] [2022-05-06T01:47:17.943Z] Platform:      win32
+[debug] [2022-05-06T01:47:17.943Z] Node Version:  v17.9.0
+[debug] [2022-05-06T01:47:17.945Z] Time:          Fri May 06 2022 07:47:17 GMT+0600 (Omsk Standard Time)
+[debug] [2022-05-06T01:47:17.945Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-06T01:47:18.065Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-06T01:47:18.066Z] > authorizing via signed-in user (biplobhossen6020@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  F:\react\toy-warehouse-client-site
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+

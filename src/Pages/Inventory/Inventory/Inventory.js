@@ -7,10 +7,16 @@ import './Inventory.css';
 
 const Inventory = () => {
     const { id } = useParams();
-    const [toy, setToy] = useState({});
+    const [toy, setToy] = useState([]);
     const quantity = { quantity: toy.quantity - 1 };
     const url = `https://morning-headland-26668.herokuapp.com/toys/${id}`;
     const { register, handleSubmit, reset } = useForm();
+
+    useEffect(() => {
+        fetch(`https://morning-headland-26668.herokuapp.com/toys/${id}`)
+            .then(res => res.json())
+            .then(data => setToy(data));
+    }, [])
 
     const onSubmit = data => {
         const agrre = window.confirm(`Are you sure`);
@@ -26,15 +32,10 @@ const Inventory = () => {
                 .then(regult => {
                     toast('Update your Quantity');
                     reset();
+                    setToy(regult);
                 })
         }
     }
-
-    useEffect(() => {
-        fetch(`https://morning-headland-26668.herokuapp.com/toys/${id}`)
-            .then(res => res.json())
-            .then(data => setToy(data));
-    }, [])
 
     return (
         <div className="quantity-container pb-5 pt-2">

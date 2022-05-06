@@ -11,14 +11,28 @@ import { toast } from 'react-toastify';
 import Loadding from '../../Sheard/Loadding/Loadding';
 
 const Inventorys = () => {
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+    const [size, setSize] = useState(5);
     const [user, loading, error] = useAuthState(auth);
 
     const [toys, setToys] = useState([]);
     useEffect(() => {
-        fetch('https://morning-headland-26668.herokuapp.com/toys')
+        fetch(`https://morning-headland-26668.herokuapp.com/toys?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => setToys(data))
-    }, [])
+    }, [page,size])
+
+    useEffect(() => {
+        fetch('https://morning-headland-26668.herokuapp.com/productCount')
+            .then(res => res.json())
+            .then(data => {
+                const count = data.count;
+                const pages = Math.ceil(count / 5);
+                setPageCount(pages)
+            })
+
+    })
 
     const handelDelete = id => {
         const url = `https://morning-headland-26668.herokuapp.com/toys/${id}`;
@@ -77,7 +91,16 @@ const Inventorys = () => {
                     ))
                 }
             </div>
-            <Link style={{textDecoration:"none"}} to='/addItem'> <Button style={{background:"tomato",border:"none"}} className='d-block mx-auto btn-xxl mt-4 w-25'>Add New Item</Button>  </Link>
+            <div className='pagenation container'>
+                {
+                    [...Array(pageCount).keys()].map(num => <button onClick={() => setPage(num)} className={page === num ? 'selected' : "unSelected"}>{num + 1}</button>)
+                }
+                <select onChange={e => setSize(e.target.value)}>
+                    <option value="5" selected>5</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <Link style={{ textDecoration: "none" }} to='/addItem'> <Button style={{ background: "tomato", border: "none" }} className='d-block mx-auto btn-xxl mt-4 w-25'>Add New Item</Button>  </Link>
         </div >
     );
 };

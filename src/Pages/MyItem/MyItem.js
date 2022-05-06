@@ -18,7 +18,7 @@ const MyItem = () => {
     useEffect(() => {
         const getUser = async () => {
             const email = user?.email;
-            const url = `http://localhost:5000/user?email=${email}`;
+            const url = `https://morning-headland-26668.herokuapp.com/user?email=${email}`;
 
             try {
                 const { data } = await axios.get(url, {
@@ -29,10 +29,10 @@ const MyItem = () => {
                 setUserProduct(data);
             }
             catch (error) {
-                if (error.response.status === 401 || error.response.status === 403) {
-                    signOut(auth)
-                    nevigate('/login');
-                }
+                // if (error.response.status === 401 || error.response.status === 403) {
+                //     signOut(auth)
+                //     nevigate('/login');
+                // }
             }
 
         }

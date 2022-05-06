@@ -1,18 +1,33 @@
-.singeleProduct-delete-btn{
+.singeleProduct-delete-btn {
     border: none;
     padding: 8px 20px;
     /* width: 40%; */
     font-size: 14px;
     border: 0.5px solid lavender;
 }
-.singeleProduct-delete-btn:hover{
+
+.singeleProduct-delete-btn:hover {
     background: transparent;
     color: gray;
     border: 0.5px solid lavender;
 }
 
+.selected {
+    background: tomato;
+    color: #fff;
+    border: 1px solid lightblue;
+}
+
+.unSelected {
+    margin: 0 4px;
+    border: 1px solid lightblue;
+}
+.unSelected:last-child {
+    margin: 0;
+}
+
 @media screen and (max-width:500px) {
-    .singeleProduct-delete-btn{
+    .singeleProduct-delete-btn {
         border: none;
         padding: 8px 20px;
         font-size: 14px;
