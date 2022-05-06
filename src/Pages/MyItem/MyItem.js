@@ -7,7 +7,6 @@ import { Button } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../Sheard/firebase.init/Firebase.init';
-import Loadding from '../Sheard/Loadding/Loadding';
 import './MyItem.css';
 
 const MyItem = () => {
@@ -29,10 +28,10 @@ const MyItem = () => {
                 setUserProduct(data);
             }
             catch (error) {
-                // if (error.response.status === 401 || error.response.status === 403) {
-                //     signOut(auth)
-                //     nevigate('/login');
-                // }
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth)
+                    nevigate('/login');
+                }
             }
 
         }
@@ -54,7 +53,7 @@ const MyItem = () => {
         }
     }
 
-    
+
 
     return (
         <div className='container my-5 py-5 userProducts'>
