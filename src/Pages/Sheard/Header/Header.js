@@ -3,7 +3,7 @@ import { faHome, faSignOut } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import CustomLink from '../../../CustomLink';
-import Logo from '../../../icon/icon1.jpg';
+import Logo from '../../../icon/icon1-.jpg';
 import './Header.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init/Firebase.init';
@@ -17,17 +17,17 @@ const Header = () => {
         <div>
             <Navbar className='navber py-0 shadow-sm' collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand className='nav-brand' as={Link} to='/home'><h3><img src={Logo} alt="imaige" /><strong className='ms-0'>T</strong>oys</h3></Navbar.Brand>
+                    <Navbar.Brand className='nav-brand' as={Link} to='/home'><h5 className='m-0'><strong className='ms-0'>T</strong>oys<img src={Logo} alt="imaige" /></h5></Navbar.Brand>
                     {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mx-auto">
+                        <Nav className="ms-auto">
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/home"> <FontAwesomeIcon className='me-1 text-secondary' icon={faHome} />Home</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/blogs">Blogs</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-1" to="/addItem">Add Item<span className='offer-masage'>20% off for you</span></CustomLink>
                         </Nav>
 
-                        <Nav className="ms-auto">
+                        <Nav className="ms-auto mt-2">
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/manageInventorys">Manage Inventory</CustomLink>
                             <CustomLink className="nav-item nav-link mx-3 my-2 " to="/myItem">My Item</CustomLink>
                             {

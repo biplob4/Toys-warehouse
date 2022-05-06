@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import footerImg from '../../../icon/icon2-removebg-preview.png';
+import footerImg from '../../../icon/homeIcon.png';
 import './Fotter.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faGoogle, faGithub, faLinkedin, faYoutube, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -16,7 +16,7 @@ const Footer = () => {
 
                         <div className="col-md-4 col-xs-12">
                             <div className="first text-start">
-                                <h3 className='text-center'> <img className='w-25' src={footerImg} alt="img" /> </h3>
+                                {/* <h3 className='text-center'> <img className='w-25 text-light' src={footerImg} alt="img" /> </h3> */}
                                 <h1 ><h5>Aboute this warehouse</h5></h1>
                                 <p className=''> It was originally designed for those who want to do business with toys. All kinds of toys are stored here. You can store toys here if you want. This will improve your business. Hope you understand, thank you for our target.</p>
                             </div>
