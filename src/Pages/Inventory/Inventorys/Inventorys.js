@@ -44,6 +44,7 @@ const Inventorys = () => {
                 .then(res => res.json())
                 .then(data => {
                     const remainning = toys.filter(toy => toy._id !== id);
+                    toast('Delete Item')
                     setToys(remainning);
                 })
         }

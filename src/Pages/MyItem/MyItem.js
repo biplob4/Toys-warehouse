@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../Sheard/firebase.init/Firebase.init';
 import './MyItem.css';
 
@@ -49,6 +50,7 @@ const MyItem = () => {
                 .then(data => {
                     const remainning = userProduct.filter(product => product._id !== id);
                     setUserProduct(remainning);
+                    toast('Delete Item')
                 })
         }
     }

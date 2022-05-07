@@ -16,30 +16,27 @@ const Inventory = () => {
         fetch(`https://morning-headland-26668.herokuapp.com/toys/${id}`)
             .then(res => res.json())
             .then(data => setToy(data));
-    }, [])
+    }, [toy, quantity])
 
     const onSubmit = data => {
-        const agrre = window.confirm(`Are you sure`);
-        if (agrre) {
-            fetch(url, {
-                method: "PUT",
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(data)
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(regult => {
+                toast('Update your Quantity');
+                reset();
+                setToy(regult);
             })
-                .then(res => res.json())
-                .then(regult => {
-                    toast('Update your Quantity');
-                    reset();
-                    setToy(regult);
-                })
-        }
     }
 
     return (
         <div className="quantity-container pb-5 pt-2">
-            <h3 className='text-success my-5 text-center'>Please Add Quantity</h3>
+            <h3 className='text-success my-5 text-center'>Please Manage Quantity</h3>
             <div className='container check-out p-4'>
                 <div className="text-center ">
                     <img className='mb-4 rounded w-100' src={toy.image} alt="img" />
@@ -52,6 +49,10 @@ const Inventory = () => {
                         <h6 className='ms-auto'><span className='text-peimary text-smal'>Quantity:</span> {toy.quantity}</h6>
                     </div>
                     <hr />
+                    <div className="d-flex">
+                        <h6>Supplier Name: {toy.supplierName}</h6>
+                        <h6 className='ms-auto'>{toy.description}</h6>
+                    </div>
                 </div>
                 <div className="checkOut-from">
                     <div className="">

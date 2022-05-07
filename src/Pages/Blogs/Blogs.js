@@ -6,22 +6,26 @@ const Blogs = () => {
         <div>
             <div className='question'>
                 <div>
+                    <h2>Differences between sql and nosql databases. ?</h2>
+                    <p>SQL হলো structured query language ,,আর  NoSQL হলো not only SQL| এদের মধ্যে পার্থক্য হলো,,
+                        SQL হল রিলেশনাল ডাটাবেজ ম্যানেজমেন্ট সিস্টেম আর NoSQL  হল নন রিলেশনাল ডাটাবেজ ম্যানেজমেন্ট সিস্টেম|
+                        SQL Database হল  table based ডাটাবেস সিস্টেম | এবং এখানে আমাদের টেবিল defend করে দিতে হয় সেখানে কয়টি row থাকবে কয়টি columns থাকবে| অন্যদিকে noSQL হল  Document based ডাটাবেস সিস্টেম এবং  কাজ করে key এবং value নিয়ে| এখানে টেবিল ক্রিয়েট হয়না এখানে কালেকশন ক্রিয়েট হয়|</p>
+                </div>
+                <div>
                     <h2> When should you use nodejs and when should you use mongodb ?</h2>
-                    <p>প্রোগ্রামিং এর ভাষায় semantic tag বলতে বোঝায় কোন একটি HTML এর meaningful tag কে বোঝায়|
-                        এই semantic tag গুলো মূলত HTML5 এ এসেছে, এর আগে এই semantic tag গুলো ছিল না | প্রোগ্রামার সহ ব্রাউজার যেন কোড গুলো দেখে বুঝতে পারে এটা কোন জায়গা বা কোন সেকশন এর কোড মূলত এইজন্যই  semantic tag ব্যবহার করা হয় বা এটা এসেছে | semantic tag গুলো যেমন,,,header, nav, section, aside, form, article, footer এছাড়াও আরও কয়েকটি semantic tag আছে |
+                    <p> NodeJS হল একটি JavaScript  runtime environment.। এটি আসলে জাভাস্ক্রিপ্টকে সার্ভারের বাইরে চলতে সাহায্য করে। এটি সার্ভার সাইড ডেভেলপমেন্টে ব্যবহৃত হয়। কিন্তু, MongoDB হল NoSQL ডাটাবেস। এটি JSON  হিসাবে ডেটা সঞ্চয় করে। এটি স্টোর ডেটার জন্য ব্যবহৃত হয়।
+
+                        সর্বশেষে বলা যায় যে,,,MongoDB হল একটি ডাটাবেস| যেটা আমরা ডাটা সঞ্চয় করার সময় ব্যবহার করি| এবং NodeJS আমাদের ক্লায়েন্ট সাইটটিকে এর সার্ভার সাইটের মাধ্যমে ডাটাবেসের সাথে সংযোগ করার সময় ব্যবহার করি। |
                     </p>
                 </div>
                 <div>
-                    <h2>Differences between sql and nosql databases. ?</h2>
-                    <p>context API হচ্ছে একটি React এর Hook যেটা Createcontaxt এবং Usecontext কমান্ড দিয়ে ইউজ করতে হয় | context API শুধুমাত্র Props Drilling কমানোর জন্য এসেছে | এটি  Dataটাকে তার নিজের কাছে রেখে দেয় যার জন্য পুরো tree এর যে কোন component থেকে Data টা Use করতে পারি খুব সহজেই কোন রকম Props Drilling ছাড়া  | এটি একটি অনেক গুরুত্বপূর্ণ Hook|</p>
-                </div>
-                <div>
                     <h2>Difference between javascript and nodejs ?</h2>
-                    <p>Element মূলত দুই ধরনের হয়,, একটি হচ্ছে block-element আরেকটি inline element | যে একটি element  পুরো একটি লাইন ব্লক করে থাকে  সেই সব element গুলোকে block-element বলে এবং যে  element গুলো এক লাইনে সব থাকে সেই গুলোকে inline-element  বলে | এছাড়াও আরেকটা element আছে,,,সেটা হচ্ছে  inline-block-element যেটাকে মূলত Custom-Style করে বানাতে হয় | block-element কে যখন Style করে এক লাইনে নিয়ে আসা হয় তখন সেটাকে বলে inline-block-element |</p>
+                    <p>জাভাস্ক্রিপ্ট আর node.js এর পার্থক্য কিছু নিচে দেওয়া হল,,,
+                        জাভাস্ক্রিপ্ট একটি প্রোগ্রামিং ভাষা যা ওয়েবসাইটে স্ক্রিপ্ট লেখার জন্য ব্যবহৃত হয়। নোডজেএস একটি জাভাস্ক্রিপ্ট runtime environment। জাভাস্ক্রিপ্ট শুধুমাত্র ব্রাউজারে চলে। আর NodeJS এর সাহায্যে ব্রাউজারের বাইরে Javascript চালাতে পারি। Javascript মূলত ক্লায়েন্ট-সাইডে ব্যবহৃত হয়। আর NodeJS সার্ভার-সাইডে ব্যবহৃত হয়। জাভাস্ক্রিপ্ট HTML  ট্যাগ যোগ করা যায়। Nodejs এর HTML ট্যাগ যোগ করা যায় না। জাভাস্ক্রিপ্ট ফ্রন্টএন্ড ডেভেলপমেন্টে ব্যবহার করা হয়। Nodejs সার্ভার-সাইড ডেভেলপমেন্টে ব্যবহার করা হয়|</p>
                 </div>
                 <div>
                     <h2> What is the purpose of jwt and how does it work ?</h2>
-                    <p>Element মূলত দুই ধরনের হয়,, একটি হচ্ছে block-element আরেকটি inline element | যে একটি element  পুরো একটি লাইন ব্লক করে থাকে  সেই সব element গুলোকে block-element বলে এবং যে  element গুলো এক লাইনে সব থাকে সেই গুলোকে inline-element  বলে | এছাড়াও আরেকটা element আছে,,,সেটা হচ্ছে  inline-block-element যেটাকে মূলত Custom-Style করে বানাতে হয় | block-element কে যখন Style করে এক লাইনে নিয়ে আসা হয় তখন সেটাকে বলে inline-block-element |</p>
+                    <p>jwt হল Jason Web Token| আমরা jwt টোকেন ইউজ করি user বা ডাটা  identify এবং ওয়েব অ্যাপ্লিকেশন সিকিউর করার জন্য| jwt এ শুধুমাত্র ইউজার আইডেন্টিফাই হয়না, এখানে আমাদের ওয়েবসাইটে যেকোনো ডাটা সিকিউর করে রাখা যায়| jwt প্রত্যেকটা ইউজারের বা ডাটার জন্য এক একটি টোকেন তৈরি করে| সেখানে তিনটি অংশ থাকে যা ডট দিয়ে ভাগ করা থাকে, প্রথম অংশটি হেডার এবং দ্বিতীয় টি অবজেক্ট বা ইউজার ইনফর্মেশন এবং তৃতীয় অংশটি সিগনেচার যা  কাজ করে ভ্যালিড ইউজার বা ডাটা চেক করার জন্য|</p>
                 </div>
             </div>
         </div>

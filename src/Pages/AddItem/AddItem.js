@@ -27,11 +27,11 @@ const AddItem = () => {
                 <h1 className='pt-4 text-primary'>Add a new Product</h1>
                 <form className=' d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='ps-3  mb-3' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-                    <textarea className='ps-2 mb-3' placeholder='Description' {...register("description")} />
                     <input className='ps-3  mb-3' placeholder='SupplierName' {...register("supplierName")} />
                     <input className='ps-3  mb-3' placeholder='Quantity' {...register("quantity")} />
                     <input className='ps-3  mb-3' placeholder='price' {...register("price")} />
                     <input className='ps-3  mb-3' placeholder='Potho Url' {...register("image")} />
+                    <textarea className='ps-2 mb-3' placeholder='Description' {...register("description")} />
                     <input className='w-50 btn bg-primary text-light d-block mx-auto ps-auto' type="submit" value='Add Item' />
                 </form>
             </div>
